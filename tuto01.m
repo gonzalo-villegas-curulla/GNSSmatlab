@@ -109,13 +109,12 @@ title('HDOP'); ylabel('m'); xlabel('s');
 
 % Consider a variation of the number of satellites in view
 
-% Find expected sample index for a change in the
-% number of satellites in view.
+% Find expected sample index for a change in the number of satellites in
+% view.
 [~, satChangeIdx] = max(abs(diff(hdops)));
 
 
-% Visualize the satellite geometry before the
-% change in HDOP.
+% Visualize the satellite geometry before the change in HDOP.
 satAz = status(satChangeIdx).SatelliteAzimuth;
 satEl = status(satChangeIdx).SatelliteElevation;
 numSats = numel(satAz);
